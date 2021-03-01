@@ -1,0 +1,33 @@
+.row-spacing { 
+    margin: 50px; 
+}
+
+.header {
+    background-color: lightskyblue!important;
+}
+
+.white-text {
+    color: white;
+}
+
+
+ol.circle {
+    list-style: none;
+    counter-reset: item;
+  }
+ 
+  ol.circle > li{
+    counter-increment: item;
+    margin-bottom: 5px;
+  }
+ 
+ ol.circle > li:before {
+    margin-right: 10px;
+    content: counter(item);
+    background: lightskyblue;
+    border-radius: 150%;
+    color: white;
+    width: 1.3em;
+    text-align: center;
+    display: inline-block;
+  }
