@@ -1,0 +1,25 @@
+<div class="container header">
+    <div class="row row-spacing">
+        <div class="col-12">
+            <h1 class="font-weight-bold text-center white-text">Drink Maker</h1>
+        </div>
+    </div>
+    <div class="row row-spacing">
+        <div class="col-12">
+                <ng-select [(ngModel)]="selectedDrink"
+                placeholder="Select a drink"
+                (change)="drinkChange($event)">
+                <ng-option *ngFor="let drink of drinks" 
+                        [value]="drink.id">{{drink.name}}</ng-option>
+            </ng-select>
+        </div>
+    </div>
+
+    <div class="row row-spacing">
+        <div class="col-12">
+            <ol class="circle">
+                <li *ngFor="let action of actions" class="list-group-item align-items-center"><a>{{action}}</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
